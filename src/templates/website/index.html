@@ -1,0 +1,46 @@
+{% extends "website/base.html" %}
+
+{% block css %}
+<style type="text/css">
+.parallax-container {
+  height: 250px;
+}
+</style>
+{% endblock css %}
+
+{% block content %}
+<div class="parallax-container">
+	<div class="parallax"><img src="/static/images/parallax1.jpg"></div>
+	</div>
+	<div class="section white">
+	<div class="row container">
+	  <h2 class="header">Recent Posts</h2>
+	  {% for post in posts %}
+	  <h4>{{ post.title }}</h4>
+	  <h6>Posted by: {{ post.user.first_name }} {{ post.user.last_name }} on {{ post.posted }}</h6>
+	  <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+	  <hr />
+	  {% endfor %}
+	  <p>dlkfjdlfjd lkjlkf jdafklj klfj sdlkfjsd fljfdlskfjsdlkfjsdoifjsd oifjds iofjsdoif jsdiof</p>
+	  <p>dlkfjdlfjd lkjlkf jdafklj klfj sdlkfjsd fljfdlskfjsdlkfjsdoifjsd oifjds iofjsdoif jsdiof</p>
+	  <p>dlkfjdlfjd lkjlkf jdafklj klfj sdlkfjsd fljfdlskfjsdlkfjsdoifjsd oifjds iofjsdoif jsdiof</p>
+	  <p>dlkfjdlfjd lkjlkf jdafklj klfj sdlkfjsd fljfdlskfjsdlkfjsdoifjsd oifjds iofjsdoif jsdiof</p>
+	  <p>dlkfjdlfjd lkjlkf jdafklj klfj sdlkfjsd fljfdlskfjsdlkfjsdoifjsd oifjds iofjsdoif jsdiof</p>
+	  <p>dlkfjdlfjd lkjlkf jdafklj klfj sdlkfjsd fljfdlskfjsdlkfjsdoifjsd oifjds iofjsdoif jsdiof</p>
+	  <p>dlkfjdlfjd lkjlkf jdafklj klfj sdlkfjsd fljfdlskfjsdlkfjsdoifjsd oifjds iofjsdoif jsdiof</p>
+	  <p>dlkfjdlfjd lkjlkf jdafklj klfj sdlkfjsd fljfdlskfjsdlkfjsdoifjsd oifjds iofjsdoif jsdiof</p>
+	</div>
+</div>
+<div class="parallax-container">
+	<div class="parallax"><img src="/static/images/parallax2.jpg"></div>
+	</div>
+</div>
+{% endblock content %}
+
+{% block js %}
+<script type="text/javascript">
+	$(document).ready(function(){
+      $('.parallax').parallax();
+    });
+</script>
+{% endblock js %}
